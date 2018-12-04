@@ -1,0 +1,88 @@
+
+.fukocons {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 0 0;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background-color: #888;
+  transition: background-color 0.2s ease;
+
+  &.services {
+    mask-image: url('./assets/fukocons/services.svg')
+  }
+  &.store {
+    mask-image: url('./assets/fukocons/store.svg')
+  }
+  &.request {
+    mask-image: url('./assets/fukocons/request.svg')
+  }
+  &.user {
+    mask-image: url('./assets/fukocons/user.svg')
+  }
+  &.cart {
+    mask-image: url('./assets/fukocons/cart.svg')
+  }
+
+  // &.marker {
+  //   mask-image: url('assets/fukocons/marker.svg');
+  // }
+
+  // &.phone {
+  //   mask-image: url('assets/fukocons/phone.svg');
+  // }
+
+  // &.mail {
+  //   mask-image: url('assets/fukocons/mail.svg');
+  // }
+
+  // &.button--next {
+  //   mask-image: url('assets/fukocons/next.svg');
+  //   background-color: #252f3e;
+  // }
+
+  // &.button--prev {
+  //   mask-image: url('assets/fukocons/prev.svg');
+  //   background-color: #252f3e;
+  // }
+
+  // &.arrow--prev {
+  //   mask-image: url('assets/fukocons/arrow-prev.svg');
+  // }
+
+  // &.add {
+  //   mask-image: url('assets/fukocons/add.svg');
+  // }
+
+  // &.up {
+  //   mask-image: url('assets/fukocons/up.svg');
+  // }
+
+  // &.down {
+  //   mask-image: url('assets/fukocons/down.svg');
+  // }
+
+  // &.save {
+  //   mask-image: url('assets/fukocons/check.svg');
+  // }
+
+  // &.remove {
+  //   mask-image: url('assets/fukocons/remove.svg');
+  // }
+
+  // &.upload {
+  //   mask-image: url('assets/fukocons/upload.svg');
+  // }
+
+  // &.logout {
+  //   mask-image: url('assets/fukocons/logout.svg');
+  // }
+
+  // &.menu {
+  //   mask-image: url('assets/fukocons/menu.svg');
+  // }
+
+  // &.filter {
+  //   mask-image: url('assets/fukocons/filter.svg');
+  // }
+}

@@ -1,0 +1,65 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 0;
+    }
+
+    .printek {
+        width: 140px;
+        height: 32px;
+        mask:
+            url('../../assets/printek.svg')
+            no-repeat center/contain;
+        background: linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB);
+    }
+
+    nav {
+        display: flex;
+
+        a {
+            display: flex;
+            align-items: center;
+            margin: 0 16px;
+            text-decoration: none;
+            font-family: Raleway;
+            color: #12D8FA;
+            font-weight: bold;
+            transition: color 0.2s ease;
+
+            .fukocons {
+                background-color: #12D8FA;
+            }
+
+            // CAUTION: Hard Coded Style!
+            // Needs to be updated if menu items changed.
+            &:nth-child(4)::before {
+                content: '';
+                width: 64px;
+            }
+
+            &.active, &:hover {
+                color: #1FA2FF;
+
+                .fukocons {
+                    background-color: #1FA2FF;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

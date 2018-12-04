@@ -1,0 +1,159 @@
+
+$radius: calc(100vh - 96px);
+$diameter: calc((100vh - 96px) *2);
+$primary-color: #1FA2FF;
+$color-chain: #1FA2FF, #12D8FA, #A6FFCB;
+
+.section--entry {
+    // topbar height excluded
+    height: $radius;
+
+    .printek__universe {
+        position: relative;
+        height: $diameter;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding-top: 96px;
+
+        .printek__solar {
+            position: absolute;
+            width: $diameter;
+            height: $diameter;
+
+            &#printek__solar.let-it-spin {
+                .track--01-01 {
+                    transform: rotateZ(-45deg);
+                    .printek__planet {
+                        transform: rotateZ(45deg);
+                    }
+                }
+                .track--01-02 {
+                    transform: rotateZ(35deg);
+                    .printek__planet {
+                        transform: rotateZ(-35deg);
+                    }
+                }
+                .track--02 {
+                    transform: rotateZ(-15deg);
+                    .printek__planet {
+                        transform: rotateZ(15deg);
+                    }
+                }
+                .track--03 {
+                    transform: rotateZ(80deg);
+                    .printek__planet {
+                        transform: rotateZ(-80deg);
+                    }
+                }
+            }
+    
+            .printek__orbit {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                border: 1px solid $primary-color;
+                padding: 96px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.orbit--01 {
+                    transition: padding 0.2s ease;
+
+                    &:hover {
+                        padding: 80px;
+                    }
+                }
+                &.orbit--02 {
+                    border-color: rgba(31, 162, 255, 0.7);
+                }
+                &.orbit--03 {
+                    border-color: rgba(31, 162, 255, 0.5);
+                }
+                &.orbit--04 {
+                    border-color: rgba(31, 162, 255, 0.3);
+                }
+
+                .printek__track {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    transition: transform 1s ease;
+
+                    &.dusk-left {
+                        transform: rotateZ(-180deg);
+                        .printek__planet {
+                            transform: rotateZ(180deg);
+                        }
+                    }
+                    &.dusk-right {
+                        transform: rotateZ(180deg);
+                        .printek__planet {
+                            transform: rotateZ(-180deg);
+                        }
+                    }
+
+                    .printek__planet {
+                        position: absolute;
+                        bottom: calc(100% + 15px);
+                        max-width: 220px;
+                        border-radius: 6px;
+                        // border: 1px solid;
+                        padding: 16px;
+                        box-sizing: border-box;
+                        color: $primary-color;
+                        background-color: #fff;
+                        box-shadow: 0 10px 30px 0px #2222224f;
+                        transform-origin: center calc(100% + 15px);
+                        transition: transform 1s ease;
+
+                        .planet__heading {
+                            display: flex;
+                            align-items: center;
+                            font-family: Roboto;
+                            font-weight: bold;
+
+                            .fukocons {
+                                background-color: $primary-color;
+                            }
+
+                            h4, p {
+                                margin: 0;
+                            }
+                        }
+
+                        &::before, &::after {
+                            content: '';
+                            position: absolute;
+                            left: calc(50% - 4px);
+                            bottom: -20px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 100%;
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+    
+                &.barycenter {
+                    z-index: 2;
+                    border: none;
+                    padding: 0;
+                    background-color: $primary-color;
+                    transition: transform 0.6s ease;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

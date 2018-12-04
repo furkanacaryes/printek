@@ -1,0 +1,20 @@
+<section id="topbar" class="topbar">
+  <div class="container">
+    <div id="printek" class="printek"></div>
+    <nav>
+      <a
+        *ngFor="let r of routes"
+        routerLinkActive="active"
+        [routerLink]="r.routerLink"
+        [routerLinkActiveOptions]="{exact: true}"
+        [class.icon-button]="!r.name">
+        <div class="fukocons {{r.icon}}"></div>
+        <div class="nav__name">{{r.name}}</div>
+      </a>
+    </nav>
+  </div>
+</section>
+
+<section [@route]="getState(o.activatedRouteData)">
+  <router-outlet #o="outlet"></router-outlet>
+</section>
