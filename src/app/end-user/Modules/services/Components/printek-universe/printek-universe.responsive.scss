@@ -1,0 +1,68 @@
+
+:host {
+
+    --radius   : calc(100vh - 96px);
+    --diameter : 900px;
+    
+    --degree-01-01 :  10deg;
+    --degree-02-01 :  -5deg;
+    --degree-02-02 : 185deg;
+    --degree-03    : 175deg;
+
+
+    /* iPhone 6/7/8 */
+    @media only screen and (min-width : 375px) {
+    
+        --degree-01-01 :  20deg;
+        --degree-02-01 : -10deg;
+        --degree-02-02 : 190deg;
+        --degree-03    : 175deg;
+    }
+    
+    
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        
+        --degree-01-01 :  40deg;
+        --degree-02-01 : -50deg;
+        --degree-02-02 : 200deg;
+        --degree-03    : 170deg;
+    }
+    
+    
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+    
+        --degree-01-01 : -65deg;
+        --degree-02-01 : -25deg;
+        --degree-02-02 :  35deg;
+        --degree-03    :  80deg;
+    
+        #printek__universe {
+            padding: 96px 0 0 0;
+    
+            .printek__orbit {
+                padding: 96px;
+    
+                &.orbit--04 {
+                    border-width: 1px;
+                }
+                &.barycenter {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (min-width : 1200px) {
+
+        --diameter : calc(var(--radius) *2);
+    }
+
+
+    @media only screen and (min-width : 1366px) {
+
+        --diameter : 1200px;
+    }
+}

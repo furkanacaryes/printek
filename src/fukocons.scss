@@ -23,13 +23,33 @@
   &.cart {
     mask-image: url('./assets/fukocons/cart.svg')
   }
+  &.contact {
+    mask-image: url('./assets/fukocons/contact.svg')
+  }
+  &.sale {
+    mask-image: url('./assets/fukocons/sale.svg')
+  }
+  &.drop {
+    mask-image: url('./assets/fukocons/drop.svg')
+  }
+  &.dots {
+    mask-image: url('./assets/fukocons/dots.svg')
+  }
+  &.dots-sale {
+    mask-image: url('./assets/fukocons/dots-sale.svg')
+  }
+  &.copyleft {
+    mask-image: url('./assets/fukocons/copyleft.svg')
+  }
+  &.acar {
+    mask-image: url('./assets/fukocons/acar.svg')
+  }
+  &.phone {
+    mask-image: url('assets/fukocons/phone.svg');
+  }
 
   // &.marker {
   //   mask-image: url('assets/fukocons/marker.svg');
-  // }
-
-  // &.phone {
-  //   mask-image: url('assets/fukocons/phone.svg');
   // }
 
   // &.mail {

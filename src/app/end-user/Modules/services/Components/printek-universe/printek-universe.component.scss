@@ -1,0 +1,159 @@
+
+@import './printek-universe.responsive.scss';
+
+$primary-color: #1FA2FF;
+$color-chain: #1FA2FF, #12D8FA, #A6FFCB;
+
+$tracks:
+    track--01-01,
+    track--02-01,
+    track--02-02,
+    track--03;
+
+$degrees:
+    var(--degree-01-01),
+    var(--degree-02-01),
+    var(--degree-02-02),
+    var(--degree-03);
+
+
+.printek__universe {    
+    position: relative;
+    height: var(--diameter);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 16px 0;
+
+    .printek__solar {
+        position: absolute;
+        width: var(--diameter);
+        height: var(--diameter);
+
+        .printek__orbit {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 1px solid $primary-color;
+            padding: 96px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.orbit--01 {
+                transition: padding 0.2s ease;
+                // padding: 0;
+
+                // &:hover {
+                //     padding: 80px;
+                // }
+            }
+            &.orbit--02 {
+                border-color: rgba(31, 162, 255, 0.7);
+                padding: 160px;
+            }
+            &.orbit--03 {
+                border-color: rgba(31, 162, 255, 0.5);
+                padding: 160px;
+            }
+            &.orbit--04 {
+                border-color: rgba(31, 162, 255, 0.3);
+                border-width: 0;
+                padding: 0;
+            }
+
+            .printek__track {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                opacity: 0;
+                transition: transform 1s ease, opacity 0.6s ease;
+
+                &.dusk-left {
+                    transform: rotateZ(-180deg);
+                    .printek__planet {
+                        transform: rotateZ(180deg);
+                    }
+                }
+                &.dusk-right {
+                    transform: rotateZ(180deg);
+                    .printek__planet {
+                        transform: rotateZ(-180deg);
+                    }
+                }
+
+                .printek__planet {
+                    position: absolute;
+                    bottom: calc(100% + 15px);
+                    max-width: 220px;
+                    border-radius: 6px;
+                    padding: 16px;
+                    box-sizing: border-box;
+                    color: $primary-color;
+                    background-color: #fff;
+                    box-shadow: 0 10px 30px 0px #2222224f;
+                    transform-origin: center calc(100% + 15px);
+                    transition: transform 1s ease;
+
+                    .planet__heading {
+                        display: flex;
+                        align-items: center;
+                        font-family: Roboto;
+                        font-weight: bold;
+
+                        .fukocons {
+                            background-color: $primary-color;
+                        }
+
+                        h4, p {
+                            margin: 0;
+                        }
+                    }
+
+                    &::before, &::after {
+                        content: '';
+                        position: absolute;
+                        left: calc(50% - 4px);
+                        bottom: -20px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            &.barycenter {
+                z-index: 2;
+                border: none;
+                padding: 0;
+                background-color: $primary-color;
+                transition: transform 0.6s ease;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &.let-it-spin .printek__orbit .printek__track {
+            opacity: 1;
+
+            @each $track in $tracks {
+                &.#{$track} {
+                    transform: rotateZ(nth($degrees, index($tracks, #{$track})));
+
+                    .printek__planet {
+                        transform: rotateZ(calc(#{nth($degrees, index($tracks, #{$track}))} * -1))
+                    }
+                }
+            }
+        }
+    }
+}

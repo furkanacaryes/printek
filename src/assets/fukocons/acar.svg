@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg4579"
+   viewBox="0 0 92.761152 29.07501"
+   height="8.2056141mm"
+   width="26.179258mm">
+  <defs
+     id="defs4581">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="829.20581"
+       x2="131.32475"
+       y1="846.28424"
+       x1="132.01152"
+       id="linearGradient4584"
+       xlink:href="#linearGradient6080" />
+    <linearGradient
+       id="linearGradient6080">
+      <stop
+         id="stop6082"
+         offset="0"
+         style="stop-color:#c7a700;stop-opacity:1;" />
+      <stop
+         id="stop6084"
+         offset="1"
+         style="stop-color:#ffcf40;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="89.677498"
+       x2="164.64717"
+       y1="105.46697"
+       x1="164.37474"
+       id="linearGradient4594"
+       xlink:href="#linearGradient6080" />
+    <linearGradient
+       y2="829.20581"
+       x2="131.32475"
+       y1="846.28424"
+       x1="132.01152"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5172"
+       xlink:href="#linearGradient6080" />
+    <linearGradient
+       y2="829.20581"
+       x2="131.32475"
+       y1="846.28424"
+       x1="132.01152"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5174"
+       xlink:href="#linearGradient6080" />
+    <linearGradient
+       y2="89.677498"
+       x2="164.64717"
+       y1="105.46697"
+       x1="164.37474"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5176"
+       xlink:href="#linearGradient6080" />
+    <linearGradient
+       y2="829.20581"
+       x2="131.32475"
+       y1="846.28424"
+       x1="132.01152"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5178"
+       xlink:href="#linearGradient6080" />
+  </defs>
+  <metadata
+     id="metadata4584">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(26.38058,-340.68184)"
+     id="layer1">
+    <g
+       id="g4571"
+       style="fill:url(#linearGradient4584);fill-opacity:1"
+       transform="translate(-108.4458,-482.0423)">
+      <path
+         id="path4151-5-5"
+         d="m 94.46366,822.72414 -12.39844,28.39844 0.87891,0 11.88085,-27.23828 11.83985,27.23828 0.8789,0 -12.35937,-28.39844 z"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:medium;line-height:125%;font-family:Raleway;-inkscape-font-specification:'Raleway Thin';letter-spacing:-5.53999996px;word-spacing:0px;fill:url(#linearGradient5172);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="path4157-3-6"
+         d="m 158.89541,822.78354 0.35547,0.79883 7.57549,0 c 0.98667,0 1.91883,0.22636 2.79883,0.67969 0.88,0.42667 1.64125,1.0007 2.28125,1.7207 0.66667,0.72 1.18526,1.54714 1.55859,2.48047 0.37333,0.93333 0.56055,1.90659 0.56055,2.91992 0,0.98667 -0.16047,1.94558 -0.48047,2.87891 -0.32,0.93333 -0.78511,1.77481 -1.39844,2.52148 -0.58667,0.72 -1.30682,1.30644 -2.16015,1.75977 -0.85333,0.45333 -1.81419,0.67968 -2.88086,0.67968 l -0.86938,0 0.38891,0.80079 5.20117,11.1582 0.95899,0 -5.19922,-11.1582 c 1.06667,-0.08 2.03992,-0.3618 2.91992,-0.8418 0.90667,-0.50667 1.68031,-1.14659 2.32031,-1.91992 0.64,-0.8 1.1338,-1.70542 1.48047,-2.71875 0.34667,-1.01333 0.51953,-2.06683 0.51953,-3.16016 0,-1.06667 -0.19961,-2.10776 -0.59961,-3.12109 -0.4,-1.04 -0.96164,-1.95977 -1.68164,-2.75977 -0.69333,-0.82667 -1.53286,-1.47898 -2.51953,-1.95898 -0.98667,-0.50667 -2.05255,-0.75977 -3.19922,-0.75977 l -5.78125,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:medium;line-height:125%;font-family:Raleway;-inkscape-font-specification:'Raleway Thin';letter-spacing:-5.53999996px;word-spacing:0px;fill:url(#linearGradient5174);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         transform="translate(-32.70866,740.6325)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4594);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4485">
+        <path
+           d="m 140.85164,96.52665 q 0,-2.56 0.88,-5.08 0.92,-2.52 2.6,-4.52 1.72,-2.04 4.2,-3.28 2.52,-1.28 5.72,-1.28 3.8,0 6.44,1.76 2.64,1.72 3.92,4.44 l -0.76,0.24 q -0.84,-1.56 -1.96,-2.64 -1.08,-1.08 -2.4,-1.72 -1.28,-0.68 -2.68,-0.96 -1.36,-0.32 -2.72,-0.32 -2.96,0 -5.28,1.2 -2.32,1.16 -3.92,3.08 -1.6,1.92 -2.44,4.36 -0.8,2.4 -0.8,4.84 0,2.72 0.96,5.2 1,2.48 2.68,4.4 1.72,1.88 4,3 2.28,1.12 4.92,1.12 1.4,0 2.88,-0.36 1.48,-0.36 2.84,-1.08 1.4,-0.72 2.56,-1.84 1.2,-1.16 2.04,-2.72 l 0.76,0.2 q -0.72,1.6 -1.96,2.84 -1.24,1.24 -2.76,2.08 -1.52,0.84 -3.24,1.28 -1.68,0.4 -3.28,0.4 -2.88,0 -5.32,-1.28 -2.44,-1.28 -4.2,-3.32 -1.72,-2.08 -2.72,-4.68 -0.96,-2.64 -0.96,-5.36 z"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Raleway;-inkscape-font-specification:'Raleway Thin';fill:url(#linearGradient5176);fill-opacity:1"
+           id="path4536" />
+      </g>
+      <path
+         id="path4151-5-5-9"
+         d="m 147.40526,823.22026 -12.39844,28.39844 0.87891,0 11.88085,-27.23828 11.83985,27.23828 0.8789,0 -12.35937,-28.39844 z"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:40px;line-height:125%;font-family:Raleway;-inkscape-font-specification:'Raleway Thin';letter-spacing:-5.53999996px;word-spacing:0px;fill:url(#linearGradient5178);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

@@ -8,12 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ServicesComponent implements OnInit {
 
   isLoading = true;
-  isSpinConfirmed = false;
 
   constructor() { }
 
   ngOnInit() {
-    setTimeout(_ => this.isSpinConfirmed = true, 1200);
+    setTimeout(_ => this.isLoading = false, 0);
   }
 
 }

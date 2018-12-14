@@ -1,0 +1,43 @@
+
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 424px;
+    min-width: 424px;
+    padding: 0 20px;
+    transform: rotateX(40deg) rotateZ(-40deg);
+
+    .phone {
+        position: relative;
+        width: 180px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        margin: 16px;
+        border-radius: 16px;
+        box-shadow: -5px 5px 16px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: inherit;
+            box-shadow: 8px -8px 12px 0px rgba(0, 0, 0, 0.3) inset;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 0;
+            border-radius: 8px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            margin: 16px 0 0 8px;
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+            display: none;
+        }
+    }
+}

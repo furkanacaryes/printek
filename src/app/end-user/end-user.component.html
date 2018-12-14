@@ -15,6 +15,66 @@
   </div>
 </section>
 
+
 <section [@route]="getState(o.activatedRouteData)">
   <router-outlet #o="outlet"></router-outlet>
 </section>
+
+
+<div class="footer">
+    <div class="footer__solar">
+        <div class="orbit">
+            <div class="orbit">
+                <div class="orbit">
+                    <div class="orbit barycenter">
+                      <div class="printek"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="footer__menu">
+        <a
+          *ngFor="let r of routes"
+          routerLinkActive="active"
+          [routerLink]="r.routerLink"
+          [routerLinkActiveOptions]="{exact: true}"
+          [class.icon-button]="!r.name">
+          <div class="fukocons {{r.icon}}"></div>
+          <div class="nav__name">{{r.name}}</div>
+        </a>
+      </div>
+
+      <div class="footer__info printek-box">
+        <div class="footer__info-adress">
+          <div class="fukocons store"></div>
+          <div class="text">
+            Sinanbey Mahallesi,<br/>
+            Katip Ahmet Efendi Sk.<br/>
+            No:8, 16400 İnegöl/Bursa
+          </div>
+        </div>
+
+        <div class="footer__info-phone">
+          <div class="fukocons phone"></div>
+          <div class="text">(0224) 711 <strong>39 29</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="branded-by">
+        <div class="container">
+            <div class="license">
+                <div class="fukocons copyleft"></div>
+                <div>Copyleft 2019</div>
+            </div>
+            <div class="acar-digital">
+                <a href="https://acar.digital" target="_blank">
+                    <div class="fukocons acar"></div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+</div>

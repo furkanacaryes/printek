@@ -1,0 +1,86 @@
+
+.printek-section p {
+    margin: 32px 0;
+}
+
+.box-grid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+
+    .printek-box {
+        width: calc(50% - 32px);
+        // height: ;
+        flex-direction: column;
+        justify-content: center;
+        margin: 16px;
+        color: rgba(0, 0, 0, 0.7);
+
+        .fukocons {
+            width: 32px;
+            height: 32px;
+            margin: 0 0 16px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        &:nth-child(1) {
+            background-color: cyan;
+        }
+        &:nth-child(2) {
+            background-color: magenta;
+            color: #fff;
+
+            .fukocons {
+                background-color: #fff;
+            }
+        }
+        &:nth-child(3) {
+            background-color: yellow;
+        }
+    }
+}
+
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 488px;
+    max-width: 488px;
+    padding: 220px 50px;
+    align-items: baseline;
+    transform: rotateX(40deg) rotateZ(-40deg);
+    transform-style: preserve-3d;
+
+    .cartridge-box {
+        width: 180px;
+        height: 350px;
+        background-color: rgb(222, 225, 245);
+        margin: 32px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 180px;
+            height: 350px;
+            background-color: rgb(178, 215, 240);
+            box-shadow: 10px -10px 40px -10px rgba(0, 0, 0, 0.2);
+            transform: rotateY(90deg);
+            transform-origin: left;
+        }
+        &::after {
+            content: '35A';
+            font-size: 48px;
+            font-weight: bold;
+            font-family: roboto;
+            padding: 16px;
+            box-sizing: border-box;
+            color: #222;
+            display: block;
+            width: 180px;
+            height: 180px;
+            background-color: rgb(184, 183, 241);
+            transform: rotateX(-90deg);
+            transform-origin: top;
+        }
+    }
+}

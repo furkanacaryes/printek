@@ -1,0 +1,105 @@
+
+.canvas {
+    width: 220px;
+    transform: rotateX(40deg) rotateZ(-40deg);
+    transform-style: preserve-3d;
+    padding: 40px 240px;
+    
+    .printer {
+        position: relative;
+        width: 220px;
+        height: 380px;
+        background-color: #29d;
+        margin: 0 0 64px 0;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .paper-io {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 64px;
+            margin: 64px 0;
+            border-radius: 16px 0 0 16px;
+            background-image: linear-gradient(to right, #222, #888);
+
+            .paper-io__lid {
+                width: 120px;
+                height: 200px;
+                margin: 32px 0;
+                transform-origin: left;
+                transform: rotateY(-60deg);
+                background-color: #222;
+                border-radius: 0 32px 32px 0;
+            }
+        }
+
+        .front {
+            position: relative;
+            width: 220px;
+            height: 380px;
+            transform-origin: left;
+            transform: rotateY(90deg);
+            background-color: red;
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+
+            .paper-io__lid {
+                transform: rotateY(90deg);
+            }
+        }
+        .side {
+            width: 220px;
+            height: 220px;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+            background-color: blue;
+        }
+    }
+
+    .computer {
+        width: 180px;
+        height: 300px;
+        background-color: blue;
+        transform-style: preserve-3d;
+        transform: translateZ(-220px);
+        border-radius: 24px 8px;
+
+        &::before,
+        .lid::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 170px;
+            margin: 0 0 10px 10px;
+            height: 290px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .lid {
+            width: 180px;
+            height: 300px;
+            transform-origin: right;
+            transform: rotateY(100deg);
+            background-color: blue;
+            border-radius: 24px 8px;
+
+            &::before {
+                position: unset;
+                margin: 10px 0 0 10px;
+            }
+        }
+    }
+}

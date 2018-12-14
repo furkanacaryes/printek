@@ -1,40 +1,109 @@
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
-    .container {
-        margin: 0 auto;
-    }
-}
+#root + * {
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-    .container {
-        max-width: 736px;
-    }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-    .container {
-        max-width: 960px;
+    /* iPhone 5 */ 
+    @media only screen and (min-width : 320px) {
+        
     }
 
-    .printek__solar {
-        // max-height: 992px;
-    }
-}
+    /* iPhone 6/7/8 */
+    @media only screen and (min-width : 375px) {
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-    .container {
-        max-width: 1164px;
     }
+    
+    
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
 
-    .printek__solar {
-        // max-height: 1164px;
+        .printek-section--text {
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    }
+    
+    
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+    
+        .container {
+            max-width: 704px;
+        }
+    
+        
+        .printek-section--text {
+            h1 {
+                font-size: 2.8em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        .printek-section--craft {
+            display: flex;
+        }
+
+
+        printek-cartridge {
+            .printek-box {
+                height: 160px;
+            }
+        }
+
+
+        .footer {
+            .barycenter {
+                padding: 16px;
+
+                .printek {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    
+    
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        
+        .container {
+            max-width: 960px;
+        }
+    
+        .printek-section--text {
+            h1 {
+                font-size: 3.7em;
+            }
+            h2 {
+                font-size: 2.7em;
+            }
+        }
+
+
+        printek-cartridge {
+            .printek-box {
+                height: 216px;
+            }
+        }
+    }
+    
+    
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+    
+        printek-mobile-device {
+            .canvas {
+                min-width: 636px;
+                max-width: 636px;
+            }
+            .phone:nth-child(4),
+            .phone:nth-child(5) {
+                display: flex;
+            }
+        }
     }
 }
