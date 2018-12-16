@@ -14,16 +14,21 @@ import { Route } from './Interfaces/route';
       // Services to Contact Component Transition
       transition('services => contact', group([
 
+        query(':leave printek-printek-universe', [
+          style({
+            height: '100%'
+          })
+        ], { optional: true }),
+
         query(':leave .barycenter', [
           animate('600ms 600ms ease', style({
-            position: 'var(--cover-pos)',
             width: 'var(--cover)',
             height: 'var(--cover)'
           }))
         ], { optional: true }),
 
         query(':enter', [
-          style({opacity: 0, zIndex: 3}), // set zIndex 3 locally
+          style({opacity: 0}),
           animate('600ms 1200ms ease', style({opacity: 1}))
         ], { optional: true })
       ])),
@@ -33,13 +38,18 @@ import { Route } from './Interfaces/route';
       transition('contact => services', group([
 
         query(':leave', [
-          style({opacity: '*', zIndex: 2}),
+          style({opacity: '*'}),
           animate('600ms ease', style({opacity: 0}))
+        ], { optional: true }),
+
+        query(':enter printek-printek-universe', [
+          style({
+            height: '100%'
+          })
         ], { optional: true }),
 
         query(':enter .barycenter', [
           style({
-            position: 'var(--cover-pos)',
             width: 'var(--cover)',
             height: 'var(--cover)'
           }),

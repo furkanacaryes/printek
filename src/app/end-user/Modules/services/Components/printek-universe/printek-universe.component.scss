@@ -17,10 +17,17 @@ $degrees:
     var(--degree-03);
 
 
+:host {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
 .printek__universe {    
     position: relative;
     height: var(--diameter);
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     justify-content: center;
     padding: 100px 0 16px 0;

@@ -1,5 +1,16 @@
 #root + * {
 
+    // Needs to be global due to encapsulation
+    // Used by 
+    /*
+        printek-service
+        printek-printek-universe
+    */
+    --radius     : calc(100vh - 96px);
+    --diameter   : 900px;
+    --universe   : calc(var(--diameter) + 96px);
+
+
     /* iPhone 5 */ 
     @media only screen and (min-width : 320px) {
         
@@ -139,8 +150,10 @@
 
 
         printek-cartridge {
-            .printek-box {
-                height: 216px;
+            .box-grid {
+                .printek-box {
+                    height: 224px;
+                }
             }
         }
     }
@@ -148,6 +161,8 @@
     
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
+
+        --diameter   : calc(var(--radius) *2);
     
         printek-mobile-device {
             .canvas {
@@ -159,5 +174,11 @@
                 display: flex;
             }
         }
+    }
+
+
+    @media only screen and (min-width : 1366px) {
+
+        --diameter   : 1200px;
     }
 }

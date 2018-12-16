@@ -1,0 +1,12 @@
+
+:host {
+    position: relative;
+    display: block;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: var(--universe);
+    }
+}
