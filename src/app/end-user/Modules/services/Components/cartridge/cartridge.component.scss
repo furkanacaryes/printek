@@ -7,15 +7,16 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -16px;
+    margin: 0 -2vw;
 
     .printek-box {
-        width: calc(50% - 32px);
-        // height: ;
+        width: 38vw;
+        height: 38vw;
+        margin: 2vw;
         flex-direction: column;
         justify-content: center;
-        margin: 16px;
         color: rgba(0, 0, 0, 0.7);
+        font-size: 0.7em;
 
         .fukocons {
             width: 32px;

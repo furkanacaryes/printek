@@ -129,11 +129,16 @@ $degrees:
             }
 
             &.barycenter {
+                position: absolute;
                 z-index: 2;
+                width: var(--barycenter);
+                height: var(--barycenter);
                 border: none;
                 padding: 0;
                 background-color: $primary-color;
-                transition: transform 0.6s ease;
+                transition:
+                    width 0.6s ease,
+                    height 0.6s ease;
 
                 a {
                     width: 100%;

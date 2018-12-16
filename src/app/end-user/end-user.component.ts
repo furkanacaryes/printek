@@ -3,30 +3,50 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
 
 import { Route } from './Interfaces/route';
 
+
 @Component({
   selector: 'printek-end-user',
   templateUrl: './end-user.component.html',
   styleUrls: ['./end-user.component.scss'],
   animations: [
     trigger('route', [
+
+      // Services to Contact Component Transition
       transition('services => contact', group([
+
         query(':leave .barycenter', [
-          animate('600ms 600ms ease', style({transform: 'scale(5.5)'}))
+          animate('600ms 600ms ease', style({
+            position: 'var(--cover-pos)',
+            width: 'var(--cover)',
+            height: 'var(--cover)'
+          }))
         ], { optional: true }),
+
         query(':enter', [
-          style({opacity: 0, zIndex: 3}),
+          style({opacity: 0, zIndex: 3}), // set zIndex 3 locally
           animate('600ms 1200ms ease', style({opacity: 1}))
         ], { optional: true })
       ])),
 
+
+      // Contact to Services Component Transition
       transition('contact => services', group([
+
         query(':leave', [
           style({opacity: '*', zIndex: 2}),
           animate('600ms ease', style({opacity: 0}))
         ], { optional: true }),
+
         query(':enter .barycenter', [
-          style({transform: 'scale(5.5)'}),
-          animate('600ms 600ms ease', style({transform: 'scale(1)'}))
+          style({
+            position: 'var(--cover-pos)',
+            width: 'var(--cover)',
+            height: 'var(--cover)'
+          }),
+          animate('600ms 600ms ease', style({
+            width: '*',
+            height: '*'
+          }))
         ], { optional: true })
       ]))
     ])
@@ -42,7 +62,7 @@ export class EndUserComponent implements OnInit {
     { name: '',          routerLink: '/hesabim',  icon: 'user' },
     { name: '',          routerLink: '/sepetim',  icon: 'cart' },
   ];
-  
+
 
   constructor() { }
 

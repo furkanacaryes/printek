@@ -1,8 +1,12 @@
 
 :host {
 
-    --radius   : calc(100vh - 96px);
-    --diameter : 900px;
+    --radius     : calc(100vh - 96px);
+    --diameter   : 900px;
+
+    --barycenter : 62px;
+    --cover      : 200vh;
+    --cover-pos  : absolute;
     
     --degree-01-01 :  10deg;
     --degree-02-01 :  -5deg;
@@ -27,6 +31,14 @@
         --degree-02-01 : -50deg;
         --degree-02-02 : 200deg;
         --degree-03    : 170deg;
+
+        --barycenter   : 124px;
+        --cover        : 200vw;
+        --cover-pos    : fixed;
+
+        // #printek__universe .barycenter {
+        //     position: absolute;
+        // }
     }
     
     
@@ -57,12 +69,14 @@
 
     @media only screen and (min-width : 1200px) {
 
-        --diameter : calc(var(--radius) *2);
+        --diameter   : calc(var(--radius) *2);
+        --barycenter : 330px;
     }
 
 
     @media only screen and (min-width : 1366px) {
 
-        --diameter : 1200px;
+        --diameter   : 1200px;
+        --barycenter : 424px;
     }
 }

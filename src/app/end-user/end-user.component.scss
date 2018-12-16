@@ -68,7 +68,6 @@
 
 .footer {
     position: relative;
-    overflow: hidden;
     margin: 128px 0 0 0;
     background-image: linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB);
 
@@ -76,12 +75,17 @@
         position: relative;
         z-index: 1;
         display: flex;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
         padding: 64px 0;
     }
     
     .footer__menu {
+        width: 100%;
+        padding: 0 0 0 16px;
+        box-sizing: border-box;
+        align-content: space-between;
         flex-wrap: wrap;
         max-height: 144px;
 
@@ -128,7 +132,8 @@
     }
 
     .footer__info {
-        background-color: #fff;
+        position: relative;
+        top: -140px;
 
         .footer__info-adress,
         .footer__info-phone {
@@ -178,6 +183,8 @@
         align-items: center;
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        opacity: 0.3;
         
         .orbit {
             border-radius: 100%;
