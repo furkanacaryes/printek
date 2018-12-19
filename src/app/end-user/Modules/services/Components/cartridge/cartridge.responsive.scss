@@ -1,0 +1,37 @@
+
+@media only screen and (min-width : 375px) {
+    
+    .container .box-grid .printek-box {
+        font-size: 0.8em;
+    }
+}
+
+
+@media only screen and (min-width : 480px) {
+
+    .container .box-grid .printek-box {
+        font-size: 1em;
+    }
+}
+
+
+@media only screen and (min-width : 768px) {
+
+    .container .box-grid {
+        margin: 0 -16px;
+
+        .printek-box {
+            width: calc(50% - 32px);
+            height: 160px;
+            margin: 16px;
+        }
+    }
+}
+
+
+@media only screen and (min-width : 992px) {
+
+    .container .box-grid .printek-box {
+        height: 224px
+    }
+}

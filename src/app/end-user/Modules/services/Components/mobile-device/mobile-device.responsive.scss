@@ -1,0 +1,13 @@
+
+@media only screen and (min-width : 1200px) {
+
+    .canvas {
+        min-width: 636px;
+        max-width: 636px;
+
+        .phone:nth-child(4),
+        .phone:nth-child(5) {
+            display: flex;
+        }
+    }
+}

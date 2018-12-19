@@ -38,7 +38,8 @@
     }
 
     nav {
-        display: flex;
+        position: fixed;
+        display: none;
 
         a {
             display: flex;
