@@ -10,7 +10,7 @@
       true,
       "check-space"
     ],
-    "curly": true,
+    "curly": false,
     "deprecation": {
       "severity": "warn"
     },
@@ -90,8 +90,8 @@
     ],
     "radix": true,
     "semicolon": [
-      true,
-      "always"
+      false,
+      "never"
     ],
     "triple-equals": [
       true,

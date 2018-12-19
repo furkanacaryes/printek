@@ -3,12 +3,13 @@
     // Needs to be global due to encapsulation
     // Used by 
     /*
-        printek-service
+        printek-services
         printek-printek-universe
     */
-    --radius     : calc(100vh - 96px);
-    --diameter   : 900px;
-    --universe   : calc(var(--diameter) + 96px);
+    --universe-outer : 96px;
+    --radius         : calc(100vh - 122px);
+    --diameter       : 900px;
+    --universe       : calc(var(--diameter) + var(--universe-outer));
 
 
     /* iPhone 5 */ 
@@ -59,6 +60,12 @@
     
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
+
+        --universe-outer : 128px;
+        
+        .topbar .container {
+            padding: 32px 0;
+        }
     
         .container {
             width: unset;

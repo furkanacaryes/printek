@@ -4,6 +4,7 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
 import { Route } from './Interfaces/route';
 
 
+
 @Component({
   selector: 'printek-end-user',
   templateUrl: './end-user.component.html',

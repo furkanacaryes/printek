@@ -3,8 +3,7 @@
 
     --barycenter : 62px;
     --cover      : 200vh;
-    --cover-pos  : absolute;
-    
+
     --degree-01-01 :  10deg;
     --degree-02-01 :  -5deg;
     --degree-02-02 : 185deg;
@@ -31,7 +30,10 @@
 
         --barycenter   : 124px;
         --cover        : 200vw;
-        --cover-pos    : fixed;
+
+        #printek__universe {
+            padding: 128px 0 0 0;
+        }
     }
     
     
@@ -44,7 +46,7 @@
         --degree-03    :  80deg;
     
         #printek__universe {
-            padding: 96px 0 0 0;
+            // padding: 122px 0 0 0;
     
             .printek__orbit {
                 padding: 96px;
@@ -62,12 +64,12 @@
 
     @media only screen and (min-width : 1200px) {
 
-        --barycenter : 330px;
+        --barycenter : 250px;
     }
 
 
     @media only screen and (min-width : 1366px) {
 
-        --barycenter : 424px;
+        --barycenter : 400px;
     }
 }
