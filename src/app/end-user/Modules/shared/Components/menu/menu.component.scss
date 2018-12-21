@@ -1,0 +1,37 @@
+:host {
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+        margin: 0 16px;
+        text-decoration: none;
+        font-family: Raleway;
+        color: #12D8FA;
+        font-weight: bold;
+        transition: color 0.2s ease;
+
+        .fukocons {
+            background-color: #12D8FA;
+        }
+
+        // CAUTION: Hard Coded Style!
+        // Needs to be updated if menu items changed.
+        &:nth-child(5)::before {
+            content: '';
+            width: 64px;
+        }
+
+        &.active, &:hover {
+            color: #1FA2FF;
+
+            .fukocons {
+                background-color: #1FA2FF;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

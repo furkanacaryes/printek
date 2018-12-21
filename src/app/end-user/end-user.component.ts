@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 
-import { Route } from './Interfaces/route';
-
-
-
 @Component({
   selector: 'printek-end-user',
   templateUrl: './end-user.component.html',
@@ -64,16 +60,6 @@ import { Route } from './Interfaces/route';
   ]
 })
 export class EndUserComponent implements OnInit {
-
-  routes: Route[] = [
-    { name: 'Servisler', routerLink: '',          icon: 'services' },
-    { name: 'Mağaza',    routerLink: '/magaza',   icon: 'store' },
-    { name: 'Talep',     routerLink: '/talep',    icon: 'request' },
-    { name: 'İletişim',  routerLink: '/iletisim', icon: 'contact' },
-    { name: '',          routerLink: '/hesabim',  icon: 'user' },
-    { name: '',          routerLink: '/sepetim',  icon: 'cart' },
-  ];
-
 
   constructor() { }
 

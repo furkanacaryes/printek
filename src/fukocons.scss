@@ -45,7 +45,10 @@
     mask-image: url('./assets/fukocons/acar.svg')
   }
   &.phone {
-    mask-image: url('assets/fukocons/phone.svg');
+    mask-image: url('assets/fukocons/phone.svg')
+  }
+  &.menu {
+    mask-image: url('assets/fukocons/menu.svg')
   }
 
   // &.marker {

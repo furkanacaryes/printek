@@ -24,23 +24,7 @@
     @media only screen and (min-width : 480px) {}
 
 
-    @media only screen and (min-width : 600px) {
-
-        .footer {
-            > .container {
-                flex-direction: row;
-            }
-
-            .footer__menu {
-                padding: 0;
-                width: unset;
-            }
-
-            .footer__info {
-                top: unset;
-            }
-        }
-    }
+    @media only screen and (min-width : 600px) {}
     
     
     /* Small Devices, Tablets */
@@ -48,7 +32,7 @@
 
         --universe-outer : 128px;
         
-        .topbar .container {
+        .printek-offcanvas__menu .container {
             padding: 32px 0;
         }
     
@@ -91,33 +75,11 @@
                 font-size: 2.2em;
             }
         }
-
-
-        .footer {
-
-            .footer__solar {
-                opacity: 1;
-
-                .barycenter {
-                    padding: 16px;
-    
-                    .printek {
-                        width: 80px;
-                        height: 80px;
-                    }
-                }
-            }
-        }
     }
     
     
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-
-        .topbar nav {
-            position: unset;
-            display: flex;
-        }
         
         .container {
             max-width: 960px;

@@ -8,6 +8,8 @@ import { MobileDeviceComponent } from './Components/mobile-device/mobile-device.
 import { CartridgeComponent } from './Components/cartridge/cartridge.component';
 import { PrinterComponent } from './Components/printer/printer.component';
 
+import { SharedModule } from '../shared/shared.module';
+
 const routes: Routes = [
   { path: '', component: ServicesComponent }
 ];
@@ -15,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule
   ],
   declarations: [
     ServicesComponent,

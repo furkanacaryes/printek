@@ -77,3 +77,31 @@ body {
     box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
     background-color: #fff;
 }
+
+
+// Multi-used 'printek-menu' component
+// needs to be styled globally due to encapsulation
+#footer__menu a {
+    justify-content: center;
+    margin: 0 32px 16px 0;
+    color: rgba(255, 255, 255, 0.7);
+    
+    .fukocons {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &.active,
+    &:hover {
+        color: #fff;
+
+        .fukocons {
+            background-color: #fff;
+        }
+    }
+    &:nth-child(4) {
+        margin: 0;
+    }
+    &:nth-child(5)::before {
+        content: none;
+    }
+}

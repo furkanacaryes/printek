@@ -1,0 +1,36 @@
+
+:host {
+
+    @media only screen and (min-width : 600px) {
+    
+        > .container {
+            flex-direction: row;
+        }
+    
+        #footer__menu {
+            padding: 0;
+            width: unset;
+        }
+    
+        .footer__info {
+            top: unset;
+        }
+    }
+    
+    
+    @media only screen and (min-width : 768px) {
+    
+        .footer__solar {
+            opacity: 1;
+    
+            .barycenter {
+                padding: 16px;
+    
+                .printek {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
