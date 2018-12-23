@@ -24,6 +24,7 @@
     @media only screen and (min-width : 480px) {}
 
 
+    /* Custom */
     @media only screen and (min-width : 600px) {}
     
     
@@ -32,8 +33,15 @@
 
         --universe-outer : 128px;
         
-        .printek-offcanvas__menu .container {
-            padding: 32px 0;
+        .printek-topbar {
+
+            background:
+                url('assets/yosemite/yosemite-991.png')
+                no-repeat top center / cover;
+
+            .container {
+                padding: 32px 0;
+            }
         }
     
         .container {
@@ -80,6 +88,48 @@
     
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
+
+        .printek-page {
+            transform: scale(1);
+        }
+
+        .printek-topbar {
+            background:
+                url('assets/yosemite/yosemite-1199.png')
+                no-repeat top center / cover;
+        }
+
+        .printek-topbar .container {
+
+            printek-menu {
+                display: flex !important;
+                position: unset;
+                flex-direction: unset;
+
+                a {
+                    margin: 0 16px;
+
+                    &:nth-child(5) {
+                        flex-direction: unset;
+                
+                        &::before {
+                            content: '';
+                            width: 64px;
+                        }
+                    }
+                    &:last-child {
+                        display: flex;
+                    }
+                }
+            }
+
+            > .fukocons {
+                &.cart,
+                &.menu {
+                    display: none;
+                }
+            }
+        }
         
         .container {
             max-width: 960px;
@@ -100,11 +150,23 @@
     @media only screen and (min-width : 1200px) {
 
         --diameter   : calc(var(--radius) *2);
+
+        .printek-topbar {
+            background:
+                url('assets/yosemite/yosemite-1356.png')
+                no-repeat top center / cover;
+        }
     }
 
 
     @media only screen and (min-width : 1366px) {
 
         --diameter   : 1200px;
+
+        .printek-topbar {
+            background:
+                url('assets/yosemite/yosemite-1680.png')
+                no-repeat top center / cover;
+        }
     }
 }

@@ -1,25 +1,34 @@
-import { Directive, ElementRef, HostBinding, OnDestroy } from '@angular/core';
+import { Directive, HostBinding, OnInit, OnDestroy } from '@angular/core';
 
-import { fromEvent, merge, Subscription } from 'rxjs';
+import { fromEvent, merge, Subscription, Observable } from 'rxjs';
 import { map, throttleTime, debounceTime } from 'rxjs/operators';
 
 @Directive({
   selector: '[printekScrollSync]'
 })
-export class ScrollSyncDirective implements OnDestroy {
-
-  source = fromEvent(window, 'scroll')
-    .pipe(map(e => window.scrollY));
+export class ScrollSyncDirective implements OnInit, OnDestroy {
 
   sub: Subscription;
-  windowY;
+  scrollTop;
+  sourceElement: any;
+  event$: Observable<any>;
 
 
-  constructor(el: ElementRef) {
+  constructor() {}
+
+  ngOnInit() {
+    this.sourceElement = document.querySelector('.printek-page');
+
+    this.event$ = fromEvent(this.sourceElement, 'scroll')
+      .pipe(map(e => this.sourceElement.scrollTop));
+
     this.sub = merge(
-      this.source.pipe(throttleTime(10)),
-      this.source.pipe(debounceTime(10))
-    ).subscribe(y => this.windowY = y);
+      this.event$.pipe(throttleTime(10)),
+      this.event$.pipe(debounceTime(10))
+    ).subscribe(y => {
+      this.scrollTop = y;
+      console.log(y);
+    });
   }
 
   ngOnDestroy() {
@@ -29,6 +38,6 @@ export class ScrollSyncDirective implements OnDestroy {
 
   @HostBinding('style.backgroundPosition')
   get position() {
-    return `0 -${this.windowY}px`
+    return `center -${this.scrollTop}px`
   }
 }

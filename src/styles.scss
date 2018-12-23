@@ -105,3 +105,21 @@ body {
         content: none;
     }
 }
+
+
+#end-user .printek-topbar printek-menu a {
+    margin: 16px 0;
+    transform-origin: top left;
+
+    &:nth-child(5) {
+        flex-direction: row-reverse;
+
+        &::before {
+            content: 'Hesabım';
+            width: unset;
+        }
+    }
+    &:last-child {
+        display: none;
+    }
+}

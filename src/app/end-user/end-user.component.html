@@ -1,22 +1,35 @@
 
-<!-- Stagger Menu Items with Animations -->
-<section class="printek-offcanvas__menu">
-  <div class="container">
+<div id="end-user" [class.aSecondPlease]="menuView">
 
-    <div id="printek" class="printek"></div>
-    <printek-menu></printek-menu>
-    <div class="fukocons menu" (click)="toggleMenu()"></div>
+  <section class="printek-topbar" printekScrollSync>
+    <div class="container">
+  
+      <div (click)="toggleMenu()">
+        <div class="fukocons menu"></div>
+        <div class="fukocons plus"></div>
+      </div>
 
-  </div>
-</section>
+      <div id="printek" class="printek"></div>
+      <a class="fukocons cart" routerLink="/sepetim"></a>
 
-
-<!-- Transition page on menuClick -->
-<section class="printek-offcanvas__page">  
-  <!-- Check If this wrapper is necessary -->
-  <section [@route]="getState(o.activatedRouteData)">
-    <router-outlet #o="outlet"></router-outlet>
+      <printek-menu
+        (click)="toggleMenu()"
+        [@aSecondPlease]="menuView">
+      </printek-menu>
+  
+    </div>
   </section>
 
-</section>
 
+  <section class="printek-window">
+
+    <div
+      class="printek-page"
+      [@route]="getState(o.activatedRouteData)">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+
+    <div class="overlay" (click)="toggleMenu()"></div>
+
+  </section>
+</div>  
