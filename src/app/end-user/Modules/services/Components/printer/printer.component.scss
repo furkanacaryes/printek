@@ -1,4 +1,6 @@
 
+$colors: #1FA2FF #068fb1 #12D8FA #0000c1 blue;
+
 .canvas {
     width: 220px;
     transform: rotateX(40deg) rotateZ(-40deg);
@@ -9,7 +11,7 @@
         position: relative;
         width: 220px;
         height: 380px;
-        background-color: #29d;
+        background-color: nth($colors, 1);
         margin: 0 0 64px 0;
 
         &::before {
@@ -21,7 +23,7 @@
             width: 32px;
             height: 32px;
             border-radius: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
         .paper-io {
@@ -51,7 +53,7 @@
             height: 380px;
             transform-origin: left;
             transform: rotateY(90deg);
-            background-color: red;
+            background-color: nth($colors, 2);
             transform-style: preserve-3d;
             backface-visibility: visible;
 
@@ -64,14 +66,14 @@
             height: 220px;
             transform-origin: top;
             transform: rotateX(-90deg);
-            background-color: blue;
+            background-color: nth($colors, 3);
         }
     }
 
     .computer {
         width: 180px;
         height: 300px;
-        background-color: blue;
+        background-color: nth($colors, 4);
         transform-style: preserve-3d;
         transform: translateZ(-220px);
         border-radius: 24px 8px;
@@ -93,7 +95,7 @@
             height: 300px;
             transform-origin: right;
             transform: rotateY(100deg);
-            background-color: blue;
+            background-color: nth($colors, 5);
             border-radius: 24px 8px;
 
             &::before {

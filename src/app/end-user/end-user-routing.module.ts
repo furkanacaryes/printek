@@ -8,10 +8,10 @@ const routes: Routes = [
     path: '',
     component: EndUserComponent,
     children: [
-      {
-        path: 'magaza',
-        loadChildren: './Modules/store/store.module#StoreModule'
-      },
+      // {
+      //   path: 'magaza',
+      //   loadChildren: './Modules/store/store.module#StoreModule'
+      // },
       // {
       //   path: 'talep',
       //   loadChildren: './Modules/request/request.module#RequestModule'

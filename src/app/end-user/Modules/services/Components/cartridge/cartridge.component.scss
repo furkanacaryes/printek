@@ -1,4 +1,8 @@
 
+$first:  #1FA2FF #1e8ddd #58b8fc;
+$second: #12D8FA #0eb2cf #81f6fa;
+$third:  #A6FFCB #91dbb0 #b0ffe5;
+
 .printek-section p {
     margin: 32px 0;
 }
@@ -55,7 +59,7 @@
     .cartridge-box {
         width: 180px;
         height: 350px;
-        background-color: rgb(222, 225, 245);
+        background-color: nth($first, 3);
         margin: 32px;
 
         &::before {
@@ -63,7 +67,7 @@
             display: block;
             width: 180px;
             height: 350px;
-            background-color: rgb(178, 215, 240);
+            background-color: nth($first, 2);
             box-shadow: 10px -10px 40px -10px rgba(0, 0, 0, 0.2);
             transform: rotateY(90deg);
             transform-origin: left;
@@ -79,9 +83,30 @@
             display: block;
             width: 180px;
             height: 180px;
-            background-color: rgb(184, 183, 241);
+            background-color: nth($first, 1);
             transform: rotateX(-90deg);
             transform-origin: top;
+        }
+
+        &:nth-child(1) {
+            background-color: nth($third, 1);
+    
+            &::before {
+                background-color: nth($third, 2);
+            }
+            &::after {
+                background-color: nth($third, 3);
+            }
+        }
+        &:nth-child(3) {
+            background-color: nth($second, 1);
+    
+            &::before {
+                background-color: nth($second, 2);
+            }
+            &::after {
+                background-color: nth($second, 3);
+            }
         }
     }
 }

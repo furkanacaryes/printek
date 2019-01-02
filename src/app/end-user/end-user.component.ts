@@ -19,7 +19,7 @@ import {
           })
         ], { optional: true }),
 
-        query(':leave .barycenter', [
+        query(':leave printek-printek-universe .barycenter', [
           animate('600ms 600ms ease', style({
             width: 'var(--cover)',
             height: 'var(--cover)'
@@ -47,7 +47,7 @@ import {
           })
         ], { optional: true }),
 
-        query(':enter .barycenter', [
+        query(':enter printek-printek-universe .barycenter', [
           style({
             width: 'var(--cover)',
             height: 'var(--cover)'
@@ -102,7 +102,7 @@ import {
 })
 export class EndUserComponent implements OnInit {
 
-  menuView = false
+  menuView = false;
 
 
   constructor() { }
@@ -115,7 +115,22 @@ export class EndUserComponent implements OnInit {
     return o['page']
   }
 
+  get isMobile() {
+    return window.innerWidth <= 991
+  }
+
   toggleMenu() {
-    this.menuView = !this.menuView
+    if(this.isMobile)
+      this.menuView = !this.menuView
+  }
+
+  scrollToBarycenter(o) {
+    if(o['page'] === 'contact' && !this.menuView)
+      (document.querySelector('.barycenter') || document.body)
+        .scrollIntoView({ behavior: 'smooth' })
+  }
+
+  isAbsolute(o) {
+    return o['page'] === 'contact';
   }
 }

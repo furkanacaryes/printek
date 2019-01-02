@@ -10,20 +10,33 @@
     width: 100%;
     background:
         url('../../assets/yosemite/yosemite-767.png')
-        no-repeat top center / cover;
+        #fff no-repeat top center / cover;
     box-shadow: 0 0 40px -20px;
     -moz-box-shadow: 0 0 30px -20px;
     transition:
-        box-shadow 0.3s ease 0.8s,
-        background-image 0.3s ease 0.8s;
+        box-shadow       0.3s ease 0.8s,
+        background-image 0.3s ease 0.8s,
+        background-color 0.3s ease 0.8s;
 
     &::before {
         content: '';
         position: absolute;
+        z-index: -1;
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.6);
-        z-index: -1;
+        transition: background-color 0.3s ease 0.8s;
+    }
+
+    &.no-scroll {
+        // !important due to #root selector in responsive.scss
+        background-image: none !important;
+        background-color: transparent !important;
+        box-shadow: none;
+
+        &::before {
+            background-color: transparent;
+        }
     }
 
     .container {
@@ -31,6 +44,10 @@
         align-items: center;
         justify-content: space-between;
         padding: 16px 0;
+    }
+
+    .menu-toggle {
+        position: relative;
     }
 
     .fukocons {
@@ -43,10 +60,10 @@
 
         &.plus {
             position: absolute;
-            top: 22px;
+            top: 0;
             opacity: 0;
             transition:
-                opacity 0.3s ease,
+                opacity   0.3s ease,
                 transform 0.3s ease;
         }
     }
@@ -105,13 +122,11 @@
 
     .printek-topbar {
         box-shadow: none;
-        background-image: none;
-        transition:
-            box-shadow 0.3s ease 0.8s,
-            background-image 0.3s ease 0.8s;
+        transition: box-shadow 0.3s ease 0.8s;
 
         &::before {
-            content: none;
+            background-color: #fff;
+            transition: background-color 0.3s ease;
         }
 
         .fukocons {
@@ -123,7 +138,7 @@
                 opacity: 1;
                 transform: rotateZ(45deg);
                 transition:
-                    opacity 0.3s ease 1.1s,
+                    opacity   0.3s ease 1.1s,
                     transform 0.3s ease 1.1s;
             }
         }
@@ -133,10 +148,11 @@
         z-index: 10;
         transform:
             scale(0.7)
-            translateX(200px);
+            translateX(200px)
+            translateY(32px);
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
         transition:
-            transform 0.4s ease,
+            transform  0.4s ease,
             box-shadow 0.3s ease 0.4s;
     }
 

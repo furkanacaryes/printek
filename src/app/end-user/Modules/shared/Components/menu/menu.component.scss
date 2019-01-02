@@ -2,6 +2,7 @@
     display: flex;
 
     a {
+        position: relative;
         display: flex;
         align-items: center;
         margin: 0 16px;
@@ -15,6 +16,23 @@
             background-color: #12D8FA;
         }
 
+        &:nth-child(2),
+        &:nth-child(3) {
+            &::before {
+                content: 'Yakında!';
+                position: absolute;
+                z-index: 1;
+                top: -22px;
+                left: -16px;
+                opacity: 0.7;
+                border-radius: 10px;
+                background-color: rgb(94, 209, 0);
+                color: #fff;
+                font-weight: bold;
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+        }
         // CAUTION: Hard Coded Style!
         // Needs to be updated if menu items changed.
         &:nth-child(5)::before {

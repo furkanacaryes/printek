@@ -9,14 +9,14 @@ export class ContactComponent implements OnInit {
 
   map = {
     lat: 40.0851224,
-    lng: 29.5114472,
-    zoom: 17
+    lng: 29.5136359,
+    zoom: 16
   };
 
   marker = {
     lat: 40.0851224,
-    lng: 29.5114472,
-    zoom: 17,
+    lng: 29.5136359,
+    zoom: 16,
     icon: ''
   };
 

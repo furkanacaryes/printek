@@ -1,10 +1,13 @@
 
 <div id="end-user" [class.aSecondPlease]="menuView">
 
-  <section class="printek-topbar" printekScrollSync>
+  <section
+    class="printek-topbar"
+    [class.no-scroll]="isAbsolute(o.activatedRouteData)"
+    printekScrollSync>
     <div class="container">
   
-      <div (click)="toggleMenu()">
+      <div class="menu-toggle" (click)="toggleMenu()">
         <div class="fukocons menu"></div>
         <div class="fukocons plus"></div>
       </div>
@@ -25,7 +28,8 @@
 
     <div
       class="printek-page"
-      [@route]="getState(o.activatedRouteData)">
+      [@route]="getState(o.activatedRouteData)"
+      (@route.start)="scrollToBarycenter(o.activatedRouteData)">
       <router-outlet #o="outlet"></router-outlet>
     </div>
 
