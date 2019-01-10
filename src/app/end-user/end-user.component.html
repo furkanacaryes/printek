@@ -3,7 +3,7 @@
 
   <section
     class="printek-topbar"
-    [class.no-scroll]="isAbsolute(o.activatedRouteData)"
+    [class.no-scroll]="getState(o.activatedRouteData) === 'contact'"
     printekScrollSync>
     <div class="container">
   
@@ -24,7 +24,7 @@
   </section>
 
 
-  <section class="printek-window">
+  <section class="printek-window" printekLiveContent>
 
     <div
       class="printek-page"

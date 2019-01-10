@@ -1,6 +1,8 @@
 
 $colors: #1FA2FF #12D8FA #A6FFCB;
 
+h1::before { content: 'Mobil Cihaz' }
+
 .canvas {
     display: flex;
     flex-wrap: wrap;

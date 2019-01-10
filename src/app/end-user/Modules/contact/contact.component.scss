@@ -5,12 +5,13 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #1FA2FF;
+    background-color: #444;
     color: #fff;
 
     agm-map {
         width: 100%;
         height: 100%;
+        position: absolute;
 
         &::after {
             content: '';
@@ -18,11 +19,86 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 150px;
             z-index: 1;
-            box-shadow: 0 300px 200px -100px #fff inset;
+            box-shadow: 0 90px 50px -10px #fff inset;
         }
     }
 
-    // .info {}
+    .info {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        width: 80vw;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 10px 20px 40px -10px rgba(0, 0, 0, 0.4);
+
+        &::before {
+            content: '';
+            height: 96px;
+        }
+
+        .photo {
+            position: absolute;
+            top: -96px;
+            display: none;
+            height: 192px;
+            border-radius: 4px;
+            box-shadow: 0 3px 20px -3px rgba(0, 0, 0, 0.4);
+            background-color: #1FA2FF;
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: relative;
+            display: none;
+
+            acar-ui-carousel {
+                position: absolute;
+                top: 0;
+                width: 544px;
+                height: 124px;
+                display: flex;
+                align-items: center;
+                background-color: unset;
+            }
+
+            &::before {
+                content: '';
+                height: 124px;
+                display: block;
+            }
+        }
+
+        .base-text__adress,
+        .base-text__phone {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            font-family: roboto;
+            font-weight: 400;
+            color: #1FA2FF;
+
+            .fukocons {
+                background-color: #1FA2FF;
+            }
+        }
+
+        .base-button {
+            background-color: #1FA2FF;
+            color: #fff;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+
+            .fukocons {
+                background-color: #fff;
+            }
+
+            &:hover {
+                box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
 }

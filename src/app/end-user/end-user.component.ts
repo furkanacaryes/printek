@@ -125,12 +125,17 @@ export class EndUserComponent implements OnInit {
   }
 
   scrollToBarycenter(o) {
-    if(o['page'] === 'contact' && !this.menuView)
+    if(o['page'] === 'contact' && !this.menuView) {
       (document.querySelector('.barycenter') || document.body)
-        .scrollIntoView({ behavior: 'smooth' })
-  }
+        .scrollIntoView({ behavior: 'smooth' });
 
-  isAbsolute(o) {
-    return o['page'] === 'contact';
+      // Jumpy Fix
+      // Setting scrollY to 0 prevents jumpy :enter
+      // while navigating from 'printek-services' to 'printek-contact'
+      setTimeout(_ => {
+        (document.querySelector('.printek-page') || document.body)
+          .scroll({ top: 0, behavior: 'instant' });
+      }, 1200);
+    }
   }
 }

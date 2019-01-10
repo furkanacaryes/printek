@@ -9,11 +9,11 @@ import { FooterComponent } from './Components/footer/footer.component';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     MenuComponent,
-    FooterComponent
+    FooterComponent,
   ],
   exports: [
     MenuComponent,

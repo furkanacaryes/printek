@@ -23,12 +23,9 @@ export class ScrollSyncDirective implements OnInit, OnDestroy {
       .pipe(map(e => this.sourceElement.scrollTop));
 
     this.sub = merge(
-      this.event$.pipe(throttleTime(10)),
-      this.event$.pipe(debounceTime(10))
-    ).subscribe(y => {
-      this.scrollTop = y;
-      console.log(y);
-    });
+      this.event$.pipe(throttleTime(100)),
+      this.event$.pipe(debounceTime(100))
+    ).subscribe(y => this.scrollTop = y);
   }
 
   ngOnDestroy() {

@@ -1,6 +1,8 @@
 
 $colors: #1FA2FF #068fb1 #12D8FA #0000c1 blue;
 
+h1::before { content: 'Yazıcı&Bilgisayar' }
+
 .canvas {
     width: 220px;
     transform: rotateX(40deg) rotateZ(-40deg);

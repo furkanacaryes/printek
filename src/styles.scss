@@ -34,25 +34,46 @@ body {
         opacity: 0.1;
     }
     &.printek-section--text {
-        z-index: 1;
+        // z-index: 1;
+        overflow: unset;
 
-        h1, h2 {
-            font-weight: bold;
+        .section-heading {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
             font-family: raleway;
-            margin: 0;
         }
         
         h1 {
+            margin: 0;
             font-size: 1.9em;
-            background-image: linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB);
-            -webkit-background-clip: text;
+            font-weight: 800;
+            font-family: raleway;
+            background-image:
+                linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB 110%);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            &::before {
+                position: absolute;
+                z-index: -1;
+                width: max-content;
+                text-shadow:
+                    0 -10px 20px #fff,
+                    0 20px 30px rgba(0, 0, 0, 0.1);
+                font-weight: 900;
+            }
         }
-        
-        h2 {
-            font-size: 1.6em;
-            color: rgba(0, 0, 0, 0.2);
+
+        .underlay {
+            position: absolute;
+            top: -60px;
+            z-index: -2;
+            font-size: 110px !important;
+            font-weight: 900;
+            text-shadow: 0 0 0 inherit;
+            opacity: 0.04;
         }
         
         p {
@@ -125,5 +146,84 @@ body {
     }
     &:last-child {
         display: none;
+    }
+}
+
+
+// printek-contact acar-ui-carousel
+// needs to be global due to encapsulation
+printek-contact {
+
+    .slide-item {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 96px;
+        height: 96px;
+        box-shadow: 0 3px 20px -3px rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        transition:
+            opacity    0.4s ease,
+            transform  0.4s ease,
+            box-shadow 0.3s ease;
+
+        img {
+            width: 100%;
+        }
+
+        &:hover {
+            box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
+        }
+
+        &.deepPrev {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        &.prev {
+            transform: translate3d(112px, 0, 0) scale(0.9);
+        }
+        &.current {
+            transform: translate3d(224px, 0, 0);
+        }
+        &.next {
+            transform: translate3d(336px, 0, 0) scale(0.9);
+        }
+        &.deepNext {
+            transform: translate3d(448px, 0, 0) scale(0.8);
+            opacity: 0;
+        }
+    }
+
+    .slider__buttons {
+        position: absolute;
+        z-index: 1;
+        width: 96px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        left: 16px;
+
+        .slider__button {
+            width: 36px;
+            height: 36px;
+            background-color: #1FA2FF;
+            cursor: pointer;
+
+            &.slider__button--prev {
+                mask:
+                    url('assets/fukocons/prev.svg')
+                    no-repeat center/contain;
+            }
+            &.slider__button--next {
+                mask:
+                    url('assets/fukocons/next.svg')
+                    no-repeat center/contain;
+            }
+        }
     }
 }

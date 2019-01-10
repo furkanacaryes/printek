@@ -35,9 +35,6 @@
   &.dots {
     mask-image: url('./assets/fukocons/dots.svg')
   }
-  &.dots-sale {
-    mask-image: url('./assets/fukocons/dots-sale.svg')
-  }
   &.copyleft {
     mask-image: url('./assets/fukocons/copyleft.svg')
   }
@@ -53,6 +50,21 @@
   &.plus {
     mask-image: url('assets/fukocons/plus.svg')
   }
+  &.button--next {
+    mask-image: url('assets/fukocons/next.svg')
+  }
+  &.button--prev {
+    mask-image: url('assets/fukocons/prev.svg')
+  }
+  &.printer {
+    mask-image: url('assets/fukocons/printer.svg')
+  }
+  &.mobile {
+    mask-image: url('assets/fukocons/mobile.svg')
+  }
+  &.bottles {
+    mask-image: url('assets/fukocons//bottles.svg')
+  }
 
   // &.marker {
   //   mask-image: url('assets/fukocons/marker.svg');
@@ -60,16 +72,6 @@
 
   // &.mail {
   //   mask-image: url('assets/fukocons/mail.svg');
-  // }
-
-  // &.button--next {
-  //   mask-image: url('assets/fukocons/next.svg');
-  //   background-color: #252f3e;
-  // }
-
-  // &.button--prev {
-  //   mask-image: url('assets/fukocons/prev.svg');
-  //   background-color: #252f3e;
   // }
 
   // &.arrow--prev {

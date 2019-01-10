@@ -14,9 +14,10 @@
     box-shadow: 0 0 40px -20px;
     -moz-box-shadow: 0 0 30px -20px;
     transition:
-        box-shadow       0.3s ease 0.8s,
-        background-image 0.3s ease 0.8s,
-        background-color 0.3s ease 0.8s;
+        box-shadow          0.3s ease 0.8s,
+        background-image    0.3s ease 0.8s,
+        background-color    0.3s ease 0.8s,
+        background-position 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     &::before {
         content: '';

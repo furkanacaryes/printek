@@ -4,24 +4,65 @@
   [zoom]="map.zoom"
   [disableDefaultUI]="true"
   [draggable]="false">
+
   <agm-marker
-    [latitude]="marker.lat"
-    [longitude]="marker.lng">
+    [latitude]="map.marker.lat"
+    [longitude]="map.marker.lng">
   </agm-marker>
+
+  <agm-direction
+    [origin]="origin"
+    [destination]="printek"
+    [visible]="navigationView">
+  </agm-direction>
 </agm-map>
 
-<!-- <div class="info printek-box">
-  <div class="info__adress">
-    <div class="fukocons store"></div>
-    <div>
-      Sinanbey Mahallesi,<br/>
-      Katip Ahmet Efendi Sk.<br/>
-      No:8, 16400 İnegöl/Bursa
+<section>
+  <div class="container">
+    <div class="info printek-box">
+
+      <div class="photo">
+        <img [src]="selectedImage">
+      </div>
+
+      <div class="carousel">
+        <acar-ui-carousel
+          [custom]="custom"
+          [fivePoint]="true"
+          [infinite]="true"
+          [slides]="images">
+
+          <ng-template #custom let-slide>
+            <img [src]="slide" (click)="selectImage(slide)">
+          </ng-template>
+        </acar-ui-carousel>
+      </div>
+
+      <div class="grouped">
+        <div class="base-text">
+
+          <div class="base-text__phone">
+            <div class="fukocons phone"></div>
+            <div>(0224) 711 <strong>39 29</strong></div>
+          </div>
+
+          <div class="base-text__adress">
+            <div class="fukocons store"></div>
+            <div>
+              Sinanbey Mahallesi,<br/>
+              Katip Ahmet Efendi Sk.<br/>
+              No:8, 16400 <strong>İnegöl/Bursa</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="base-button printek-box" (click)="requestNavigation()">
+          <div class="fukocons contact"></div>
+          <div>Navigasyon Başlat</div>
+        </div>
+
+      </div>
     </div>
   </div>
-
-  <div class="info__phone">
-    <div class="fukocons phone"></div>
-    <div>(0224) 711 <strong>39 29</strong></div>
-  </div>
-</div> -->
+</section>

@@ -3,6 +3,12 @@ $first:  #1FA2FF #1e8ddd #58b8fc;
 $second: #12D8FA #0eb2cf #81f6fa;
 $third:  #A6FFCB #91dbb0 #b0ffe5;
 
+:host {
+    overflow: hidden;
+}
+
+h1::before { content: 'Kartuş&Toner' }
+
 .printek-section p {
     margin: 32px 0;
 }

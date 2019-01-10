@@ -1,0 +1,58 @@
+:host {
+
+    @media only screen and (min-width : 375px) {}
+    
+    
+    @media only screen and (min-width : 480px) {}
+    
+    
+    @media only screen and (min-width : 768px) {
+
+        agm-map::before {
+            box-shadow: 0 140px 70px -20px #fff inset;
+        }
+
+        .info {
+            justify-content: space-around;
+
+            .photo {
+                display: block;
+                width: calc(50% + 16px);
+                right: 50%;
+            }
+
+            .carousel {
+                display: flex;
+                justify-content: center;
+                width: 50%;
+            }
+        }
+    }
+    
+    
+    @media only screen and (min-width : 992px) {
+
+        .info {
+            position: relative;
+            width: 40%;
+            margin: 190px 0 0 0;
+            flex-direction: column;
+            align-items: center;
+
+            .photo {
+                width: calc(100% + 32px);
+                align-self: flex-end;
+                right: unset;
+            }
+
+            .carousel {
+                display: block;
+                width: 100%;
+
+                acar-ui-carousel {
+                    right: -176px;
+                }
+            }
+        }
+    }
+}

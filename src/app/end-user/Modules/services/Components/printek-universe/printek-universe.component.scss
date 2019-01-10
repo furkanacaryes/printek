@@ -109,16 +109,21 @@ $degrees:
                     .planet__heading {
                         display: flex;
                         align-items: center;
-                        font-family: Roboto;
+                        font-family: Raleway;
                         font-weight: bold;
 
                         .fukocons {
                             background-color: $primary-color;
                         }
+                    }
 
-                        h4, p {
-                            margin: 0;
-                        }
+                    h4 {
+                        margin: 0;
+                    }
+
+                    p {
+                        font-family: Roboto;
+                        font-size: 15px;
                     }
 
                     &::before, &::after {
