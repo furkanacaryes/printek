@@ -15,6 +15,7 @@ h1::before { content: 'Yazıcı&Bilgisayar' }
         height: 380px;
         background-color: nth($colors, 1);
         margin: 0 0 64px 0;
+        transform-style: inherit;
 
         &::before {
             content: '';
@@ -36,6 +37,7 @@ h1::before { content: 'Yazıcı&Bilgisayar' }
             width: 64px;
             margin: 64px 0;
             border-radius: 16px 0 0 16px;
+            transform-style: inherit;
             background-image: linear-gradient(to right, #222, #888);
 
             .paper-io__lid {

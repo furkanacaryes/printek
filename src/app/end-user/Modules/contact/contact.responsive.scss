@@ -51,6 +51,10 @@
 
                 acar-ui-carousel {
                     right: -176px;
+
+                    &::before {
+                        height: 144px;
+                    }
                 }
             }
         }

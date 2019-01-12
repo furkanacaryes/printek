@@ -51,6 +51,8 @@
 
 
         .printek-row-component {
+            overflow: unset;
+
             &:nth-child(even) {
                 .printek-section--text {
                     left: 50%;
@@ -79,8 +81,9 @@
             h1 {
                 font-size: 2.7em;
             }
-            h2 {
-                font-size: 2.2em;
+            .underlay {
+                top: -60px;
+                font-size: 110px;
             }
         }
     }
@@ -134,13 +137,8 @@
             max-width: 960px;
         }
     
-        .printek-section--text {
-            h1 {
-                font-size: 3.7em;
-            }
-            h2 {
-                font-size: 3em;
-            }
+        .printek-section--text h1 {
+            font-size: 3.7em;
         }
 
         

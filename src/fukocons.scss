@@ -63,7 +63,25 @@
     mask-image: url('assets/fukocons/mobile.svg')
   }
   &.bottles {
-    mask-image: url('assets/fukocons//bottles.svg')
+    mask-image: url('assets/fukocons/bottles.svg')
+  }
+  &.format {
+    mask-image: url('assets/fukocons/format.svg')
+  }
+  &.broken-laptop {
+    mask-image: url('assets/fukocons/broken-laptop.svg')
+  }
+  &.cylinder {
+    mask-image: url('assets/fukocons/cylinder.svg')
+  }
+  &.battery {
+    mask-image: url('assets/fukocons/battery.svg')
+  }
+  &.socket {
+    mask-image: url('assets/fukocons/socket.svg')
+  }
+  &.iphone-home {
+    mask-image: url('assets/fukocons/iphone-home.svg')
   }
 
   // &.marker {
