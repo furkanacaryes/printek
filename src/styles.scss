@@ -2,6 +2,32 @@
 @import './fukocons.scss';
 @import './responsive.scss';
 
+@font-face {
+    font-family: 'Raleway';
+    src: url('../src/assets/fonts/Raleway/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../src/assets/fonts/Raleway/Raleway-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../src/assets/fonts/Raleway/Raleway-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../src/assets/fonts/Roboto/Roboto-Regular.ttf') fromat('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../src/assets/fonts/Roboto/Roboto-Bold.ttf') fromat('truetype');
+    font-weight: 700;
+}
+
 body {
     margin: 0;
 }
@@ -94,7 +120,7 @@ body {
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.7);
     font-family: raleway;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 4px;
     box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
     background-color: #fff;

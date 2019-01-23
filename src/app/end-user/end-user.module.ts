@@ -7,7 +7,8 @@ import { EndUserComponent } from './end-user.component';
 import { SharedModule } from './Modules/shared/shared.module';
 
 import { ScrollSyncDirective } from './Directives/scroll-sync/scroll-sync.directive';
-import { LiveContentDirective } from './Directives/live-content/live-content.directive';
+import { UniversalService } from './universal.service';
+// import { LiveContentDirective } from './Directives/live-content/live-content.directive';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { LiveContentDirective } from './Directives/live-content/live-content.dir
   declarations: [
     ScrollSyncDirective,
     EndUserComponent,
-    LiveContentDirective
-  ]
+    // LiveContentDirective
+  ],
+  providers: [UniversalService]
 })
 export class EndUserModule { }

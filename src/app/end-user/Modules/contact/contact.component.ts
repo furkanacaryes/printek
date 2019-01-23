@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LatLng } from '@agm/core';
-import { last } from '@angular/router/src/utils/collection';
+
+import { UniversalService } from '../../universal.service';
 
 @Component({
   selector: 'printek-contact',
@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit {
   selectedImage = this.images[0];
 
 
-  constructor() { }
+  constructor(private universal: UniversalService) { }
 
   ngOnInit() {
   }
@@ -56,20 +56,21 @@ export class ContactComponent implements OnInit {
   }
 
   requestNavigation() {
-    if(navigator.geolocation)
-      navigator.geolocation.getCurrentPosition(
-        pos => {
-          this.origin = {
-            lat: pos.coords.latitude,
-            lng: pos.coords.longitude
-          };
+    if(this.universal.isBrowser)
+      if(navigator.geolocation)
+        navigator.geolocation.getCurrentPosition(
+          pos => {
+            this.origin = {
+              lat: pos.coords.latitude,
+              lng: pos.coords.longitude
+            };
 
-          this.navigationView = true
-        },
-        err => {
-          // err.message
-          return;
-        }
-      )
-  }
+            this.navigationView = true
+          },
+          err => {
+            // err.message
+            return;
+          }
+        )
+    }
 }

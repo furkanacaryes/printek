@@ -3,6 +3,8 @@ import {
   trigger, transition, group, query, style, animate, stagger, state
 } from '@angular/animations';
 
+import { UniversalService } from './universal.service';
+
 @Component({
   selector: 'printek-end-user',
   templateUrl: './end-user.component.html',
@@ -105,7 +107,7 @@ export class EndUserComponent implements OnInit {
   menuView = false;
 
 
-  constructor() { }
+  constructor(private universal: UniversalService) { }
 
   ngOnInit() {
   }
@@ -116,7 +118,8 @@ export class EndUserComponent implements OnInit {
   }
 
   get isMobile() {
-    return window.innerWidth <= 991
+    return this.universal.isBrowser ?
+      window.innerWidth <= 991 : false
   }
 
   toggleMenu() {
@@ -126,6 +129,10 @@ export class EndUserComponent implements OnInit {
 
   scrollToBarycenter(o) {
     if(o['page'] === 'contact' && !this.menuView) {
+
+      if(!this.universal.isBrowser)
+        return;
+
       (document.querySelector('.barycenter') || document.body)
         .scrollIntoView({ behavior: 'smooth' });
 
