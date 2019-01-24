@@ -82,8 +82,8 @@
                 font-size: 2.7em;
             }
             .underlay {
-                top: -60px;
-                font-size: 110px;
+                top: -40px;
+                font-size: 70px;
             }
         }
     }
@@ -160,6 +160,11 @@
             background:
                 url('assets/yosemite/yosemite-1356.png')
                 #fff no-repeat top center / cover;
+        }
+
+        .printek-section--text .underlay {
+            top: -60px;
+            font-size: 110px;
         }
     }
 

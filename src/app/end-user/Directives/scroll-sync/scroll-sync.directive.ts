@@ -21,6 +21,9 @@ export class ScrollSyncDirective implements OnInit, OnDestroy {
   ngOnInit() {
     if(this.universal.isBrowser) {
 
+      if(window.innerWidth < 991)
+        return;
+
       this.sourceElem = document.querySelector('.printek-window');
 
       this.event$ = fromEvent(this.sourceElem, 'scroll')

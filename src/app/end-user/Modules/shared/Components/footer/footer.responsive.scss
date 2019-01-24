@@ -1,6 +1,16 @@
 
 :host {
 
+    @media only screen and (min-width : 360px) {
+        .footer__solar .orbit {
+            padding: 64px;
+        }
+
+        #footer__menu {
+            max-width: unset;
+        }
+    }
+
     @media only screen and (min-width : 600px) {
     
         > .container {
