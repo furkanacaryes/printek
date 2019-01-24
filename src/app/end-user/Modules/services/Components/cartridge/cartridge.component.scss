@@ -57,8 +57,10 @@ h1::before { content: 'Kartuş&Toner' }
     flex-wrap: wrap;
     min-width: 488px;
     max-width: 488px;
-    padding: 220px 50px;
-    align-items: baseline;
+    // padding: 220px 50px;
+    // align-items: baseline;
+    margin-top: -100px; // mobile-fix
+    padding: 220px 70px; // mobile-fix
     transform: rotateX(40deg) rotateZ(-40deg);
     transform-style: preserve-3d;
 

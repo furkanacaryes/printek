@@ -7,7 +7,8 @@ h1::before { content: 'Yazıcı&Bilgisayar' }
     width: 220px;
     transform: rotateX(40deg) rotateZ(-40deg);
     transform-style: preserve-3d;
-    padding: 40px 240px;
+    // padding: 40px 240px;
+    padding: 40px 260px; // mobile-fix
     
     .printer {
         position: relative;
