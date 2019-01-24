@@ -35,11 +35,11 @@ export class ContactComponent implements OnInit {
   navigationView = false;
 
   images: string[] = [
-    'assets/logo.jpg',
-    'assets/logo.jpg',
-    'assets/logo.jpg',
-    'assets/logo.jpg',
-    'assets/logo.jpg'
+    'assets/slider/01.jpg',
+    'assets/slider/02.jpg',
+    'assets/slider/03.jpg',
+    'assets/slider/04.jpg',
+    'assets/slider/05.jpg'
   ];
 
   selectedImage = this.images[0];

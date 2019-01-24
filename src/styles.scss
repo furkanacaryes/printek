@@ -177,8 +177,8 @@ body {
 }
 
 
-// printek-contact acar-ui-carousel
-// needs to be global due to encapsulation
+// printek-contact acar-ui-carousel elements
+// need to be global due to encapsulation
 printek-contact {
 
     .slide-item {
@@ -198,7 +198,7 @@ printek-contact {
             box-shadow 0.3s ease;
 
         img {
-            width: 100%;
+            height: 100%;
         }
 
         &:hover {

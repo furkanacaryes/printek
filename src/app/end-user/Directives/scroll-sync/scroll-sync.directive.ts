@@ -10,9 +10,9 @@ import { UniversalService } from '../../universal.service';
 })
 export class ScrollSyncDirective implements OnInit, OnDestroy {
 
+  sourceElem;
   sub: Subscription;
   scrollTop = 0;
-  sourceElement: any;
   event$: Observable<any>;
 
 
@@ -20,10 +20,11 @@ export class ScrollSyncDirective implements OnInit, OnDestroy {
 
   ngOnInit() {
     if(this.universal.isBrowser) {
-      this.sourceElement = document.querySelector('.printek-page');
 
-      this.event$ = fromEvent(this.sourceElement, 'scroll')
-        .pipe(map(e => this.sourceElement.scrollTop));
+      this.sourceElem = document.querySelector('.printek-window');
+
+      this.event$ = fromEvent(this.sourceElem, 'scroll')
+        .pipe(map(e => this.sourceElem.scrollTop));
 
       this.sub = merge(
         this.event$.pipe(throttleTime(100)),

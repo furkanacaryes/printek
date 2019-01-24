@@ -29,6 +29,7 @@
         position: absolute;
         bottom: 0;
         margin: 0;
+        padding-bottom: 64px;
         width: 80vw;
         align-items: flex-end;
         justify-content: center;
@@ -42,7 +43,7 @@
 
         .photo {
             position: absolute;
-            top: -96px;
+                top: -96px;
             display: none;
             height: 192px;
             border-radius: 4px;

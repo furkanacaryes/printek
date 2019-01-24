@@ -13,6 +13,12 @@
         #fff no-repeat top center / cover;
     box-shadow: 0 0 40px -20px;
     -moz-box-shadow: 0 0 30px -20px;
+    will-change:
+        background-position,
+        background-color,
+        background-image,
+        box-shadow;
+    transform: translateZ(0);
     transition:
         box-shadow          0.3s ease 0.8s,
         background-image    0.3s ease 0.8s,
@@ -84,6 +90,8 @@
         // they persist even after animation ends
         //
         // display: none;
+        will-change: transform;
+        transform: translateZ(0);
         position: absolute;
         top: 96px;
         left: 10vw;
@@ -93,16 +101,22 @@
 
 
 .printek-window {
-    overflow: hidden;
     height: 100vh;
+    overflow-y: scroll;
+    // min-height: 100vh;
+    will-change:
+        transform,
+        box-shadow;
+    transform: translateZ(0);
     transform-origin: center right;
     transition:
         transform 0.4s ease 0.8s,
         box-shadow 0.3s ease 0.8s;
 
     .printek-page {
-        height: 100%;
-        overflow-y: scroll;
+        // height: 100%;
+        // overflow-y: scroll;
+        position: relative;
     }
 
     .overlay {
@@ -150,7 +164,8 @@
         transform:
             scale(0.7)
             translateX(200px)
-            translateY(32px);
+            translateY(32px)
+            translateZ(0);
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
         transition:
             transform  0.4s ease,

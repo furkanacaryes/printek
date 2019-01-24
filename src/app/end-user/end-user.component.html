@@ -24,16 +24,15 @@
   </section>
 
 
-  <section class="printek-window">
+  <section #window class="printek-window">
 
     <div
       class="printek-page"
       [@route]="getState(o.activatedRouteData)"
       (@route.start)="scrollToBarycenter(o.activatedRouteData)">
       <router-outlet #o="outlet"></router-outlet>
+      <div class="overlay" (click)="toggleMenu()"></div>
     </div>
-
-    <div class="overlay" (click)="toggleMenu()"></div>
 
   </section>
 </div>  
