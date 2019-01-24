@@ -72,10 +72,13 @@ export class EndUserComponent implements OnInit {
       // while navigating from 'printek-services' to 'printek-contact'
       setTimeout(_ => document.scrollingElement.scroll({ top: 0 }), 1200);
 
-      // if(!this.menuView)
-        // TODO : Behaves different cross-browser
+      if(!this.menuView)
         (document.querySelector('.barycenter') || document.body)
-          .scrollIntoView({ behavior: 'smooth' });
+          .scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'end'
+          });
     }
   }
 }

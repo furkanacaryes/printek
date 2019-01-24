@@ -11,9 +11,10 @@ export const routeAnimation = [
     ], { optional: true }),
 
     query(':leave printek-printek-universe .barycenter', [
-        animate('600ms 600ms ease', style({
-            width: 'var(--cover)',
-            height: 'var(--cover)'
+        animate('400ms 600ms ease-out', style({
+            // width: 'var(--cover)',
+            // height: 'var(--cover)'
+            transform: 'scale(var(--times))'
         }))
     ], { optional: true }),
 
@@ -40,12 +41,14 @@ export const routeAnimation = [
 
         query(':enter printek-printek-universe .barycenter', [
             style({
-                width: 'var(--cover)',
-                height: 'var(--cover)'
+                // width: 'var(--cover)',
+                // height: 'var(--cover)'
+                transform: 'scale(var(--times))'
             }),
-            animate('600ms 600ms ease', style({
-                width: '*',
-                height: '*'
+            animate('600ms 600ms ease-out', style({
+                // width: '*',
+                // height: '*'
+                transform: 'scale(1)'
             }))
         ], { optional: true })
     ]))

@@ -35,9 +35,9 @@
         
         .printek-topbar {
 
-            background:
-                url('assets/yosemite/yosemite-991.png')
-                #fff no-repeat top center / cover;
+            // background:
+            //     url('assets/yosemite/yosemite-991.png')
+            //     #fff no-repeat top center / cover;
 
             .container {
                 padding: 32px 0;
@@ -92,8 +92,8 @@
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
 
-        .printek-page {
-            transform: scale(1);
+        .printek-window {
+            transform: unset !important;
         }
 
         .printek-topbar {
@@ -107,6 +107,7 @@
             printek-menu {
                 display: flex !important;
                 transform: unset !important;
+                opacity: 1 !important;
                 position: unset;
                 flex-direction: unset;
 

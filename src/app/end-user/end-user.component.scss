@@ -8,9 +8,10 @@
     position: fixed;
     z-index: 9;
     width: 100%;
-    background:
-        url('../../assets/yosemite/yosemite-767.png')
-        #fff no-repeat top center / cover;
+    // background:
+    //     url('../../assets/yosemite/yosemite-767.png')
+    //     #fff no-repeat top center / cover;
+    background-color: #fff;
     box-shadow: 0 0 40px -20px;
     -moz-box-shadow: 0 0 30px -20px;
     will-change:
@@ -103,7 +104,7 @@
 .printek-window {
     // height: 100vh;
     // overflow-y: scroll;
-    // min-height: 100vh;
+    min-height: 100vh;
     will-change:
         transform,
         box-shadow;
