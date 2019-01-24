@@ -12,8 +12,8 @@ import { UniversalService } from './universal.service';
   templateUrl: './end-user.component.html',
   styleUrls: ['./end-user.component.scss'],
   animations: [
-    trigger('route', routeAnimation()),
-    trigger('aSecondPlease', aSecondPlease()),
+    trigger('route', routeAnimation),
+    trigger('aSecondPlease', aSecondPlease),
   ]
 })
 export class EndUserComponent implements OnInit {
