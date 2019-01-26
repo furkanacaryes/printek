@@ -99,7 +99,7 @@
         .printek-topbar {
             background:
                 url('assets/yosemite/yosemite-1199.png')
-                #fff no-repeat top center / cover;
+                #fff no-repeat top center / 1184px;
         }
 
         .printek-topbar .container {
@@ -155,12 +155,12 @@
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
 
-        --diameter   : calc(var(--radius) *2);
+        // --diameter   : calc(var(--radius) *2);
 
         .printek-topbar {
             background:
-                url('assets/yosemite/yosemite-1356.png')
-                #fff no-repeat top center / cover;
+                url('assets/yosemite/yosemite-1365.png')
+                #fff no-repeat top center / 1350px;
         }
 
         .printek-section--text .underlay {
@@ -176,8 +176,8 @@
 
         .printek-topbar {
             background:
-                url('assets/yosemite/yosemite-1680.png')
-                #fff no-repeat top center / cover;
+                url('assets/yosemite/yosemite-rest.png')
+                #fff no-repeat top center / 1685px;
         }
     }
 }
